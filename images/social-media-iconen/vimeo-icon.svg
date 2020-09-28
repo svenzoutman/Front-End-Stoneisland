@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-iPhone_X_XS_11_Pro_4">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_X_XS_11_Pro_4" data-name="iPhone X, XS, 11 Pro – 4" clip-path="url(#clip-iPhone_X_XS_11_Pro_4)">
+    <rect width="50" height="50" fill="rgba(0,0,0,0)"/>
+    <path id="Icon_awesome-vimeo-v" data-name="Icon awesome-vimeo-v" d="M31.486,10.8q-.211,4.6-6.427,12.593-6.423,8.353-10.87,8.353-2.753,0-4.662-5.084C7.052,17.578,6,12.255,3.952,12.255a9.813,9.813,0,0,0-2.475,1.484L0,11.827C3.628,8.641,7.095,5.1,9.267,4.9q3.681-.359,4.528,5.027c2.018,12.762,2.911,14.688,6.581,8.909A12.414,12.414,0,0,0,22.5,14.084c.337-3.227-2.517-3.009-4.451-2.18q2.32-7.6,8.873-7.39c3.22.084,4.746,2.187,4.563,6.286Z" transform="translate(9 6.492)" fill="#fff"/>
+  </g>
+</svg>
