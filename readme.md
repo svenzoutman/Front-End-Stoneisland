@@ -30,7 +30,14 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+-![1e scherm deel 1](images/)-
+
+-![1e scherm deel 2](images/frontendhomepage2.png)-
+
+-![1e scherm deel 3](images/dropdowntext.png)-
+
+-![1e scherm deel 4](images/dropdowntext.png)-
+
 
 
 
