@@ -6,6 +6,7 @@
 body {
   margin: 0;
   background-color: white;
+  font-size: 1em;
 }
 
 a {
@@ -16,12 +17,6 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'pf_dintext_proregular", Helvetica, Arial, sans-serif';
-  src: url('PFDinTextCondPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-
-
 /* header */
 
 .header {
@@ -31,10 +26,45 @@ a {
   height: 75px;
   z-index: 3;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 }
+
+
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 15em;
+  padding-top: 60px;
+}
+
+menu a {
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  color: black;
+  padding: 8px 8px 8px 32px;
+
+}
+
+.search-icon {
+  padding: 0;
+  margin-right: 1em;
+  margin-left: 9em;
+}
+
+.shopping-bag-icon {
+  padding: 0;
+  margin: 0;
+}
+
 
 /* hamburger-menu */
 
@@ -49,8 +79,15 @@ a {
 .logo {
   width: 225px;
   height: 55px;
+  left: 35%;
+  position: relative;
+  float: left;
+
 }
 
+.header a {
+  border-bottom: none;
+}
 header button {
   border: none;
   background-color: transparent;
@@ -90,7 +127,7 @@ main  {
 #stoneislandxpersol {
   position: relative;
   text-align: center;
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
   margin-bottom: 3em;
 }
@@ -100,7 +137,7 @@ main  {
 }
 
 #stoneislandxpersol h1 {
-  font-size: 24px;
+  font-size: 1.7em;
   margin-top: .2em;
   font-weight: normal;
   letter-spacing: 1.6px;
@@ -111,13 +148,13 @@ main  {
 article {
   position: relative;
   text-align: left;
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
   margin-bottom: 3em;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 1.7em;
   margin-top: .2em;
   padding-right: 1em;
   font-weight: normal;
@@ -129,13 +166,13 @@ h2 {
 #shadowproject-autumnwinter {
   position: relative;
   text-align: left;
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
   margin-bottom: 3em;
 }
 
 #shadowproject-autumnwinter h3 {
-  font-size: 24px;
+  font-size: 1.7em;
   margin-top: .2em;
   padding-right: 4em;
   font-weight: normal;
@@ -150,7 +187,7 @@ h2 {
 /* main h4 */
 
 h4 {
-  font-size: 24px;
+  font-size: 1.7em;
   margin-top: .2em;
   padding-right: 1.5em;
   font-weight: normal;
@@ -164,8 +201,9 @@ h4 {
 footer {
   background-color: black;
   color: #919191;
-  font-size: 14px;
+  font-size: 1em;
   padding: 1.75em;
+  letter-spacing: .15em;
   /* width: 100%;
   display: grid;
   grid-template-columns:1fr 1fr;
@@ -173,17 +211,17 @@ footer {
 } 
 
 footer h5:first-of-type {
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1em;
   text-align: center;
-  padding-top: 4em;
+  padding-top: 1.5em;
   letter-spacing: 1.6px;
 }
 
 footer a {
   color: white;
-  font-size: 14px;
+  font-size: 1em;
   text-decoration: none;
   border-bottom: none;
 }
@@ -202,9 +240,9 @@ footer a {
 }
 
 #customer-service li span {
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 #customer-service li::after {
@@ -217,9 +255,18 @@ footer a {
 #customer-service li {
   list-style-type: none;
   margin-top: 1.5em;
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-transform: uppercase;
-  font-size: 13px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#customer-service a:hover {
+  padding-bottom: 1.5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  transition: 0.2s;
+
 }
 
 #social-media h5 {
@@ -250,11 +297,8 @@ footer a {
 
 #legal-area ul {
   width: 100%;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:.75em;
-  padding-left: 1.75em;
-  padding-right: 1.75em;
   margin-right: auto;
   margin-left: auto;
   
@@ -266,10 +310,16 @@ footer a {
 }
 
 #legal-area a {
-  padding-right: 2em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
   border-right-style: solid;
   border-right-width: 1px;
   text-decoration: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+  text-align: center;
 }
 
 #copyright {
@@ -279,8 +329,8 @@ footer a {
 }
 
 #copyright h6 {
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: .8em;
   margin-bottom: .5em;
   letter-spacing: 1.6px;
 }
@@ -290,6 +340,7 @@ footer a {
   color: #919191;
   display: block;
   margin-top: 1em;
+  font-size: .8em;
 }
 
 footer form {
@@ -304,8 +355,8 @@ footer form input {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
-  font-family: 'pf_dintext_proregular', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1em;
   margin-top: 1em;
 
 }
@@ -374,4 +425,40 @@ footer form button {
     margin-right: auto;
     padding: 1em;
   }
+}
+
+
+.banner {
+  display: block;
+}
+
+.banner img {
+  margin-top: 5em;
+}
+
+
+.poly-colour-page {
+  display: block;
+}
+
+
+.products-poly-colour {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+
+}
+
+.products-poly-colour h2 {
+  font-size: 1em;
+}
+
+.bottom-banner {
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-gap: 1.75em;
+}
+
+.bottom-banner img:last-of-type {
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
