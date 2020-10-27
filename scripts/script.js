@@ -1,10 +1,33 @@
 // JavaScript Document
 
-var deButton = document.querySelector("hamburger-menu");
+let button = document.querySelector('header button')
+let closeButton = document.querySelector('ul button')
 
-function doeFormNeerEnOp(){
-	let hetFormulier = document.querySelector("menu");
-	hetFormulier.classList.toggle("menu");
+function openMenu() {
+	document.body.classList.toggle('toonMenu')
+	document.body.classList.toggle('storelocator-hamburgermenu')
+	document.body.classList.toggle('socialmedia-hamburgermenu')
 }
 
-deButton.addEventListener("click", doeFormNeerEnOp);
+button.addEventListener('click', openMenu)
+closeButton.addEventListener('click', openMenu)
+
+
+var buyButtons = document.querySelectorAll("button.buy");
+
+for (i = 0; i < buyButtons.length; i++) {
+	buyButtons[i].addEventListener("click", updateShoppingBagIcon);
+}
+
+function updateShoppingBagIcon() {
+	
+	let shoppingBagIconAmount = document.querySelector(".shopping-bag-icon span");
+	
+	let currentAmount = shoppingBagIconAmount.innerHTML;
+
+	currentAmount = parseInt(currentAmount);
+	
+	let newAmount = currentAmount + 1;
+	
+	shoppingBagIconAmount.innerHTML = newAmount;
+  }

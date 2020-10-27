@@ -7,6 +7,7 @@ body {
   margin: 0;
   background-color: white;
   font-size: 1em;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -15,13 +16,121 @@ a {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   text-decoration: none;
+  outline-style: none;
 }
+
+button {
+  cursor: pointer;
+}
+
 
 /* header */
 
+.header ul {
+  position: absolute;
+  width: 70%;
+  z-index: 100;
+  margin: 0;
+  left: -100%;
+  list-style-type: none;
+  background-color: white;
+}
+
+.hamburger-menu {
+  margin-left: 1em;
+  width: 30px;
+  height: 30px;
+}
+
+.header ul li {
+  padding-bottom: 1.5em;
+  margin-left: 0;
+}
+
+.header ul li a{
+  color: black;
+}
+
+.toonMenu .standard-menu {
+  left: 0;
+  top: 0;
+  padding-top: 3em;
+  padding-left: 0;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 3em;
+  background-color: white;
+  height: 60em;
+}
+
+.toonMenu ul li:nth-of-type(5) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 1em;
+}
+
+.toonMenu .socialmedia-hamburgermenu {
+  display: flex;
+  padding-left: 0;
+  background-color: black;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  bottom: 0;
+  margin-top: 6em;
+}
+
+.socialmedia-hamburgermenu li img {
+  width: 23px;
+  height: 23px;
+}
+
+.socialmedia-hamburgermenu li {
+  padding: 1em;
+}
+  
+.toonMenu .storelocator-hamburgermenu {
+  background-color: black;
+  color: white;
+  left: 0;
+  bottom: 9%;
+  position: fixed;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.toonMenu .storelocator-hamburgermenu a {
+  padding: .2em;
+  color: white;
+  
+}
+
+.toonMenu .storelocator-hamburgermenu li span {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: white;
+  display: flex;
+}
+
+header button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+header button img {
+  width: 25px;
+  height: 25px;
+}
+
 .header {
   background-color: white;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 75px;
   z-index: 3;
@@ -30,72 +139,40 @@ a {
   align-items: center;
 }
 
-
-.menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-x: hidden;
-  transition: 0.5s;
-  width: 15em;
-  padding-top: 60px;
-}
-
-menu a {
-  text-decoration: none;
-  display: block;
-  transition: 0.3s;
-  color: black;
-  padding: 8px 8px 8px 32px;
-
-}
-
-.search-icon {
-  padding: 0;
-  margin-right: 1em;
-  margin-left: 9em;
-}
-
-.shopping-bag-icon {
-  padding: 0;
-  margin: 0;
-}
-
-
-/* hamburger-menu */
-
-.hamburger-menu {
-  width: 30px;
-  height: 30px;
-  margin-left: 1em;
-}
-
-/* header logo stoneisland */
-
-.logo {
-  width: 225px;
+.header a .logo {
+  width: 226px;
   height: 55px;
-  left: 35%;
-  position: relative;
-  float: left;
-
+  align-items: center;
 }
 
 .header a {
   border-bottom: none;
-}
-header button {
-  border: none;
-  background-color: transparent;
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
 }
 
-header button img {
-  width: 20px;
-  height: 20px;
+
+.search-icon {
+  position: absolute;
+  right: 3em;
+
+}
+
+.shopping-bag-icon {
+  position: absolute;
+  right: 0;
+}
+
+.header .shopping-bag-icon span {
+  position: absolute;
+  min-width: 1.5em; line-height: 1.5em;
+  padding: .1em;
+  right: 3em; top: .7em;
+  font-size: .7em;
+  text-align: center;
+  color: black;
 }
 
 /* main */
@@ -204,10 +281,6 @@ footer {
   font-size: 1em;
   padding: 1.75em;
   letter-spacing: .15em;
-  /* width: 100%;
-  display: grid;
-  grid-template-columns:1fr 1fr;
-  grid-gap: 1.75em; */
 } 
 
 footer h5:first-of-type {
@@ -243,7 +316,6 @@ footer a {
   text-transform: uppercase;
   font-size: 1em;
   color: white;
-  display: block;
 }
 
 #customer-service li::after {
@@ -263,14 +335,6 @@ footer a {
   line-height: 25px;
 }
 
-#customer-service a:hover {
-  padding-bottom: 1.5px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  transition: .25s;
-
-}
-
 #social-media h5 {
   text-align: left;
   padding-left: 1em;
@@ -282,14 +346,11 @@ footer a {
   padding-left: 0;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 #social-media li{
   list-style-type: none;
   padding: .7em;
-  
-  
 }
 
 #social-media li img {
@@ -297,19 +358,21 @@ footer a {
   height: 23px;
 }
 
+#legal-area {
+  text-align: center;
+}
+
 #legal-area ul {
-  width: 100%;
-  display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-right: auto;
-  margin-left: auto;
   font-family: 'PT Sans Narrow', sans-serif;
-  
+  display: flex; 
+  text-align: left; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 26em;
 }
 
 #legal-area li {
   list-style-type: none;
-
 }
 
 #legal-area a {
@@ -361,7 +424,7 @@ footer form input {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 1em;
   margin-top: 1em;
-
+  outline: none;
 }
 
 footer form input::placeholder {
@@ -372,72 +435,8 @@ footer form button {
   display: none;
 }
 
-
-
-/* 48em = 768px */ 
-
-@media (min-width: 48em) {
-  .header li {
-    float: right;
-  }
-  
-  .header li a {
-    padding: 20px 30px;
-  }
-
-  .header nav .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-
-  .header .hamburger-menu {
-    display: none;
-  }
-
-  .header .logo {
-    position: relative;
-    float: left;
-
-  }
-}
-
-
-
-
-/* Iphone XS View */
-@media (max-width:375px) {
-  .header {
-    width: 375px;
-  }
-  
-  main { 
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  align-items: center;
-  align-content: center;
-  padding: 1em;
-  margin: 0;
-  }
-  
-}
-
-@media (min-width:1000px) {
-  #customer-service {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-  }
-}
-
-
 .banner {
   display: block;
-}
-
-.banner img {
-  margin-top: 5em;
 }
 
 .poly-colour-page .banner h1 {
@@ -487,12 +486,25 @@ footer form button {
   grid-row: 2;
 }
 
+.poly-colour-page button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1em;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  transition: .25s;
+}
+
+
+/* Alle breakpoint */
+
 @media (max-width:600px) {
   .products-poly-colour {
     display: grid;
     grid-template-columns:1fr;
   }
-
 } 
 
 
@@ -522,3 +534,147 @@ footer form button {
     grid-template-columns:1fr 1fr 1fr 1fr;
   }
 } 
+
+@media (min-width:1000px) {
+  #customer-service ul:nth-of-type(2) {
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    grid-area: auto;
+  }
+
+  #customer-service ul:nth-of-type(3) {
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    grid-area: auto;
+  }
+}
+
+@media (min-width: 48em) {
+  .header nav ul {
+    right: 0;
+    position: absolute;
+  }
+  
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header nav .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .hamburger-menu {
+    display: none;
+  }
+
+  .header a .logo {
+    left: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 1em;
+  }
+}
+
+
+
+
+/* Iphone XS View */
+@media (max-width:375px) {
+  .header {
+    width: 375px;
+  }
+  
+  main { 
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  padding: 1em;
+  margin: 0;
+  }
+}
+
+@media (min-width:1000px) {
+  #customer-service {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+}
+
+
+/* alle states */
+
+main a:focus,
+#customer-service a:focus,
+#legal-area a:focus,
+#copyright a:focus {
+  border: solid 1px white;
+  padding: .3em;
+  background-color: black;
+  color: white;
+  transition: .25s;
+}
+
+footer form input:focus {
+  border: solid 3px green;
+  transition: .25s;
+}
+
+
+.standard-menu {
+  transition: .25s;
+}
+
+.standard-menu a:hover,
+.standard-menu a:focus {
+  transition: .25s;
+  color: grey;
+}
+
+#social-media a:focus {
+  border-bottom: solid 1px white;
+  padding: .5em;
+  background-color: black;
+  transition: .5s;
+}
+
+#social-media a:hover {
+  border-bottom: solid 1px white;
+  transition: .25s;
+  padding: .5em;
+}
+
+#legal-area a:hover {
+  border-bottom: solid 1px white;
+  transition: .25s;
+  padding: 1em;
+  border-right: none;
+}
+
+.poly-colour-page button:focus,
+.poly-colour-page button:hover {
+  background-color: white;
+  color: black;
+  border: solid 1px black;
+}
+
+footer #customer-service a:hover {
+  padding-bottom: 1.5px;
+  border-bottom: solid 1px white;
+  transition: 1s;
+
+}
+
+main a:hover {
+  color: grey;
+}

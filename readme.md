@@ -6,9 +6,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
-2. -bron 2-
-3. -...-
+1. -w3schools-
+2. -opdrachten van school-
+3. -Student assistenten-
 
 
 
@@ -24,7 +24,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+-De student assistent had mij geholpen met een off canvas menu-
 
 
 
@@ -63,7 +63,7 @@ Css is ook al aardig op weg. Moet alleen nog verder gaan met een mooiere menu ba
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
+-Kris had mij geholpen met een dropdowntext. Dit was makkelijk op te lossen met summary en details tag-
 
 
 
@@ -73,7 +73,7 @@ Css is ook al aardig op weg. Moet alleen nog verder gaan met een mooiere menu ba
 
 **Je focus:** -Responsive-
 
-**Je opdracht:** -https://www.residentadvisor.net-
+**Je opdracht:** -https://www.stoneisland.com-
 
 **Screenshot(s):**
 
